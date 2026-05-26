@@ -1,0 +1,103 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 25px;
+    transition: .3s;
+    z-index: 999;
+
+    &.active {
+        backdrop-filter: blur(10px); /* Эффект размытия фона */
+        background: $bg__header-active;
+    }
+
+
+    .wrapper {
+        .header__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: end;
+            justify-content: space-between;
+            padding-top: 56px;
+
+            // .header__logo {
+            //     .header__logo-link {
+            //         .header__logo-img {}
+            //     }
+            // }
+
+            .header__nav {
+                transition: .3s;
+
+                .header__list {
+                    display: flex;
+                    flex-wrap: wrap;
+
+
+                    .header__item {
+                        margin-right: 82px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        .header__logo-link {
+                            font-size: 18px;
+                            color: $primery-color;
+                            line-height: 130%;
+
+                            &:hover {
+                                opacity: 0.75;
+                                transition: .3s;
+                            }
+
+                            &:focus {
+                                opacity: 0.75;
+                                transition: .3s;
+                            }
+
+                            &:active {
+                                opacity: 0.75;
+                                transition: .3s;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .menu__burger {
+                display: none;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 30px;
+
+                span {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    border-radius: 5px;
+                    background: $primery-color;
+                    transition: .3s;
+
+                    &:nth-child(1) {
+                        top: 0;
+                    }
+
+                    &:nth-child(2) {
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

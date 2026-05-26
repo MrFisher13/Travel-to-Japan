@@ -1,0 +1,862 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -wedkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-adjust: 100%;
+  -moz-text-adjust: 100%;
+  -webkit-text-adjust: 100%;
+  font-size: 16px;
+  font-family: "Lato";
+  font-weight: 400;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+/* lato-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/src/assets/fonts/lato-v25-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/src/assets/fonts/lato-v25-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* lato-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/src/assets/fonts/lato-v25-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.top-places .top-places__title, .places .wrapper-content .places__caption .places__title, .benefits .wrapper-content .benefits__title {
+  position: relative;
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 100%;
+  margin-right: 15px;
+  padding-bottom: 10px;
+  color: #102746;
+}
+@media (max-width: 767px) {
+  .top-places .top-places__title, .places .wrapper-content .places__caption .places__title, .benefits .wrapper-content .benefits__title {
+    margin-bottom: 25px;
+  }
+}
+.top-places .top-places__title:after, .places .wrapper-content .places__caption .places__title:after, .benefits .wrapper-content .benefits__title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 253px;
+  height: 3px;
+  background: #006DFE;
+}
+@media (max-width: 767px) {
+  .top-places .top-places__title:after, .places .wrapper-content .places__caption .places__title:after, .benefits .wrapper-content .benefits__title:after {
+    width: 80px;
+  }
+}
+
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-title, .top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__comments, .top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__likes, .top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__title, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-title {
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  color: #102746;
+}
+
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-link, .top-places .top-places__cards .top-places__card .top-places__card-btn, .top-places .top-places__cards .top-places__card .top-places__card-item, .tours .wrapper-content .tour___content .tour__content-info .tour__content-item, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-description {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #102746;
+}
+
+.tours .wrapper-content .tour___content .tour__content-info .tour__content-link, .places .wrapper-content .places__caption .places__link, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link {
+  display: inline-block;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #006DFE;
+  padding-right: 59px;
+  background: url("/src/assets/img/min-imgs/min-svg/arrow.svg") no-repeat 95% center;
+  transition: 0.3s;
+}
+.tours .wrapper-content .tour___content .tour__content-info .tour__content-link:hover, .places .wrapper-content .places__caption .places__link:hover, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link:hover, .tours .wrapper-content .tour___content .tour__content-info .tour__content-link:focus, .places .wrapper-content .places__caption .places__link:focus, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link:focus, .tours .wrapper-content .tour___content .tour__content-info .tour__content-link:active, .places .wrapper-content .places__caption .places__link:active, .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link:active {
+  background: url("/src/assets/img/min-imgs/min-svg/arrow.svg") no-repeat right center;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-content {
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper__video {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-bottom: 25px;
+  transition: 0.3s;
+  z-index: 999;
+}
+.header.active {
+  backdrop-filter: blur(10px); /* Эффект размытия фона */
+  background: rgba(14, 29, 40, 0.862745098);
+}
+.header .wrapper .header__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  padding-top: 56px;
+}
+.header .wrapper .header__wrapper .header__nav {
+  transition: 0.3s;
+}
+.header .wrapper .header__wrapper .header__nav .header__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item {
+  margin-right: 82px;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item:last-child {
+  margin-right: 0;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item .header__logo-link {
+  font-size: 18px;
+  color: #FFFFFF;
+  line-height: 130%;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item .header__logo-link:hover {
+  opacity: 0.75;
+  transition: 0.3s;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item .header__logo-link:focus {
+  opacity: 0.75;
+  transition: 0.3s;
+}
+.header .wrapper .header__wrapper .header__nav .header__list .header__item .header__logo-link:active {
+  opacity: 0.75;
+  transition: 0.3s;
+}
+.header .wrapper .header__wrapper .menu__burger {
+  display: none;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 30px;
+}
+.header .wrapper .header__wrapper .menu__burger span {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  transition: 0.3s;
+}
+.header .wrapper .header__wrapper .menu__burger span:nth-child(1) {
+  top: 0;
+}
+.header .wrapper .header__wrapper .menu__burger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header .wrapper .header__wrapper .menu__burger span:nth-child(3) {
+  bottom: 0;
+}
+
+.intro {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 253px;
+  padding-bottom: 223px;
+  margin-bottom: 153px;
+}
+.intro .wrapper .intro__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.intro .wrapper .intro__content {
+  position: relative;
+}
+.intro .wrapper .intro__content .intro__title {
+  max-width: 619px;
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+}
+.intro .wrapper .intro__content .intro__subtitle {
+  max-width: 546px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFFFFF;
+  margin-bottom: 59px;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__input-container {
+  position: relative;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__input-container .form__input {
+  background: transparent;
+  background-size: 20px;
+  width: 297px;
+  border-bottom: 3px solid #FFFFFF;
+  padding-bottom: 22px;
+  padding-left: 43px;
+  margin-right: 60px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__input-container .form__input::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__input-container .form__input-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__btn {
+  max-width: 171px;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #FFFFFF;
+  background: #1B7DFF;
+  text-transform: uppercase;
+  padding: 15px 39px;
+  transition: 0.3s;
+}
+.intro .wrapper .intro__content .intro__form .form__wrapper .form__btn:hover, .intro .wrapper .intro__content .intro__form .form__wrapper .form__btn:focus, .intro .wrapper .intro__content .intro__form .form__wrapper .form__btn:active {
+  background: #529dff;
+}
+
+.benefits {
+  margin-bottom: 131px;
+}
+.benefits .wrapper-content {
+  position: relative;
+  box-shadow: 0 2px 20px rgba(21, 24, 36, 0.1607843137);
+}
+.benefits .wrapper-content .benefits__title:after {
+  content: "";
+  display: none;
+}
+.benefits .wrapper-content .benefits__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-100%);
+  padding: 93px 100px 88px 100px;
+  background: #FFFFFF;
+}
+.benefits .wrapper-content .benefits__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 55px;
+  padding: 0 100px;
+}
+.benefits .wrapper-content .benefits__cards .benefits__card {
+  grid-column: span 1;
+  margin-bottom: 112px;
+}
+.benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-img {
+  margin-bottom: 37px;
+}
+.benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-img .benefits__img {
+  display: block;
+}
+.benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-title {
+  margin-bottom: 26px;
+}
+.benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-description {
+  margin-bottom: 39px;
+}
+.places {
+  margin-bottom: 131px;
+}
+.places .wrapper-content .places__caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 36px;
+}
+.places .wrapper-content .places__caption .places__link {
+  display: flex;
+  align-items: center;
+}
+.places .wrapper-content .places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.places .wrapper-content .places__cards .places__card {
+  position: relative;
+  overflow: hidden;
+}
+.places .wrapper-content .places__cards .places__card:hover .places__card-img {
+  transform: scale(1.1);
+}
+.places .wrapper-content .places__cards .places__card::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.places .wrapper-content .places__cards .places__card._size-lg {
+  grid-column: span 3;
+  height: 354px;
+}
+.places .wrapper-content .places__cards .places__card._size-sm {
+  grid-column: span 2;
+  height: 283px;
+}
+.places .wrapper-content .places__cards .places__card .places__card-img {
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.places .wrapper-content .places__cards .places__card .places__card-title {
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  color: #FFFFFF;
+  z-index: 3;
+}
+.places .wrapper-content .places__cards .places__card .places__card-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.tours {
+  margin-bottom: 139px;
+}
+.tours .wrapper-content .tour___content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+.tours .wrapper-content .tour___content:last-child {
+  margin-bottom: 0;
+}
+.tours .wrapper-content .tour___content .tour__content-img {
+  max-width: 597px;
+  max-height: 354px;
+}
+.tours .wrapper-content .tour___content .tour__content-img .content-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tours .wrapper-content .tour___content .tour__content-info {
+  max-width: 519px;
+  padding-left: 47px;
+}
+.tours .wrapper-content .tour___content .tour__content-info .tour__content-title {
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 130%;
+  margin-bottom: 85px;
+  max-width: 360px;
+  color: #102746;
+}
+.tours .wrapper-content .tour___content .tour__content-info .tour__content-item {
+  width: 519px;
+  margin-bottom: 58px;
+  width: 100%;
+}
+.top-places {
+  margin-bottom: 87px;
+}
+.top-places .top-places__title {
+  margin-bottom: 54px;
+}
+.top-places .top-places__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 57px;
+}
+.top-places .top-places__cards .top-places__card {
+  display: flex;
+  flex-direction: column;
+  grid-column: span 2;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img {
+  position: relative;
+  margin-bottom: 45px;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(21, 24, 36, 0.4);
+  padding: 16px 25px;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__title {
+  color: #FFFFFF;
+  margin: 0 auto 0 0;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__likes {
+  color: #FFFFFF;
+  margin-right: 28px;
+  cursor: pointer;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__likes .img__likes {
+  position: relative;
+  top: 3px;
+  left: 4px;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__comments {
+  position: relative;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-img .top-places__card-state .card-state__comments .img__comments {
+  position: relative;
+  top: 4px;
+  left: 4px;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-item {
+  margin-bottom: 31px;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-btn {
+  display: inline-block;
+  max-width: 118px;
+  padding: 12px 19px;
+  background: #1B7DFF;
+  color: #FFFFFF;
+  margin: auto 0 0 0;
+  transition: 0.3s;
+}
+.top-places .top-places__cards .top-places__card .top-places__card-btn:hover, .top-places .top-places__cards .top-places__card .top-places__card-btn:focus, .top-places .top-places__cards .top-places__card .top-places__card-btn:active {
+  background: #529dff;
+}
+
+.video .wrapper__video .video__item {
+  padding-top: 56.25%;
+}
+.video .wrapper__video .video__item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  background: #0E1D28;
+  padding: 119px 0;
+}
+.footer .footer__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer .footer__item .footer__logo {
+  width: 50%;
+}
+.footer .footer__item .footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+}
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-title {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-title:hover, .footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-title:focus, .footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-title:active {
+  opacity: 0.75;
+}
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-link {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-link:hover, .footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-link:focus, .footer .footer__item .footer__nav .footer__menu .footer__menu-item .footer__menu-link:active {
+  opacity: 0.75;
+}
+
+@media (max-width: 960px) {
+  .intro .wrapper .intro__content .intro__form .form__wrapper .form__input-container .form__input {
+    margin-bottom: 25px;
+  }
+  .benefits {
+    margin-bottom: 75px;
+  }
+  .benefits .wrapper-content {
+    box-shadow: none;
+  }
+  .benefits .wrapper-content .benefits__title {
+    padding: 55px 15px;
+  }
+  .benefits .wrapper-content .benefits__cards {
+    padding: 0 15px;
+    column-gap: 25px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card {
+    position: relative;
+    height: 100%;
+    margin-bottom: 60px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-description {
+    margin-bottom: 0;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  .places {
+    margin-bottom: 75px;
+  }
+  .places .wrapper-content .places__caption .places__title {
+    margin-right: 0;
+  }
+  .places .wrapper-content .places__cards .places__card._size-lg {
+    grid-column: span 6;
+  }
+  .places .wrapper-content .places__cards .places__card._size-sm {
+    grid-column: span 6;
+  }
+  .tours .wrapper-content .tour___content {
+    column-gap: 30px;
+  }
+  .tours .wrapper-content .tour___content .tour__content-info {
+    padding: 0;
+  }
+  .tours .wrapper-content .tour___content .tour__content-info .tour__content-title {
+    margin-bottom: 15px;
+  }
+  .tours .wrapper-content .tour___content .tour__content-info .tour__content-item {
+    margin-bottom: 15px;
+  }
+  .top-places .top-places__cards {
+    column-gap: 25px;
+    row-gap: 50px;
+  }
+  .top-places .top-places__cards .top-places__card {
+    grid-column: span 3;
+  }
+  .top-places .top-places__cards .top-places__card .top-places__card-img {
+    margin-bottom: 25px;
+  }
+  .footer {
+    padding: 60px 0;
+  }
+}
+@media (max-width: 768px) {
+  .header .wrapper .header__wrapper {
+    padding-top: 25px;
+  }
+  .header .wrapper .header__wrapper .header__logo {
+    z-index: 10;
+  }
+  .header .wrapper .header__wrapper .header__nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 30%;
+    height: 100%;
+    background: rgba(14, 29, 40, 0.862745098);
+  }
+  .header .wrapper .header__wrapper .header__nav.active {
+    left: 0;
+  }
+  .header .wrapper .header__wrapper .header__nav .header__list {
+    position: fixed;
+    top: 20%;
+    padding: 15px;
+    flex-direction: column;
+  }
+  .header .wrapper .header__wrapper .header__nav .header__list .header__item {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+  .header .wrapper .header__wrapper .header__nav .header__list .header__item:last-child {
+    margin-bottom: 0;
+  }
+  .header .wrapper .header__wrapper .menu__burger {
+    display: block;
+    margin: 5px;
+  }
+  .header .wrapper .header__wrapper .menu__burger.active span {
+    background: #102746;
+  }
+  .header .wrapper .header__wrapper .menu__burger.active span:nth-child(1) {
+    top: 13px;
+    transform: rotate(45deg);
+  }
+  .header .wrapper .header__wrapper .menu__burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .header .wrapper .header__wrapper .menu__burger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 13px;
+  }
+  .intro {
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+  .intro .intro__title {
+    font-size: 30px;
+  }
+  .intro .intro__subtitle {
+    font-size: 14px;
+  }
+  .intro .intro__form .form__wrapper .form__input {
+    margin-right: 0;
+    width: 100%;
+    padding-bottom: 13px;
+    background: url(/src/assets/img/svg/circle.svg) no-repeat left top;
+  }
+  .intro .intro__form .form__wrapper .form__input::placeholder {
+    font-size: 16px;
+  }
+  .benefits {
+    margin-bottom: 35px;
+  }
+  .benefits .wrapper-content .benefits__title {
+    padding-bottom: 30px;
+    margin-right: 0;
+  }
+  .benefits .wrapper-content .benefits__cards {
+    margin-bottom: 0px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card {
+    grid-column: span 3;
+    margin-bottom: 30px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-img {
+    margin-bottom: 15px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-title {
+    margin-bottom: 15px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-description {
+    margin-bottom: 15px;
+  }
+  .benefits .wrapper-content .benefits__cards .benefits__card .benefits__card-link {
+    margin-bottom: 15px;
+  }
+  .places .wrapper-content .places__caption .places__title {
+    font-size: 28px;
+  }
+  .places .wrapper-content .places__cards .places__card._size-lg {
+    height: 230px;
+  }
+  .places .wrapper-content .places__cards .places__card._size-sm {
+    height: 230px;
+  }
+  .tours {
+    margin-bottom: 75px;
+  }
+  .tours .tour___content {
+    column-gap: 30px;
+    margin-bottom: 50px;
+  }
+  .tours .tour___content .tour__content-img {
+    max-width: 100%;
+    grid-column: span 2;
+    margin-bottom: 15px;
+  }
+  .tours .tour___content .tour__content-img:last-child {
+    grid-row-start: -1;
+  }
+  .tours .tour___content .tour__content-info {
+    grid-column: span 2;
+    padding-left: 0;
+  }
+  .tours .tour___content .tour__content-info .tour__content-title {
+    margin-bottom: 15px;
+  }
+  .tours .tour___content .tour__content-info .tour__content-item {
+    margin-bottom: 15px;
+  }
+  .top-places {
+    margin-bottom: 50px;
+  }
+  .top-places .top-places__cards {
+    column-gap: 25px;
+    row-gap: 50px;
+  }
+  .top-places .top-places__cards .top-places__card {
+    grid-column: span 6;
+  }
+  .top-places .top-places__cards .top-places__card .top-places__card-img {
+    margin-bottom: 25px;
+  }
+  .top-places .top-places__cards .top-places__card .top-places__card-item {
+    margin-bottom: 13px;
+  }
+  .footer {
+    padding: 60px 0;
+  }
+  .footer .wrapper .footer__item .footer__logo {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .footer .wrapper .footer__item .footer__nav {
+    width: 100%;
+  }
+  .footer .wrapper .footer__item .footer__nav .footer__menu {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 558px) {
+  .intro .wrapper .intro__content .intro__form .form__wrapper .form__btn {
+    font-size: 20px;
+    padding: 10px 25px;
+    max-width: 100%;
+    margin: 5px;
+  }
+  .places {
+    margin-bottom: 75px;
+  }
+  .places .wrapper-content .places__caption .places__title {
+    font-size: 28px;
+  }
+  .places .wrapper-content .places__cards .places__card._size-lg {
+    height: 170px;
+  }
+  .places .wrapper-content .places__cards .places__card._size-sm {
+    height: 170px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

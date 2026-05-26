@@ -1,0 +1,15 @@
+{
+  "name": "odigo-japan",
+  "version": "1.0.0",
+  "description": "Tour to japan's places",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --watch src/styles/scss/index.scss:src/styles/css/index.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "by MrFisher",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.99.0"
+  }
+}

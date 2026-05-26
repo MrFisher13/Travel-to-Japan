@@ -1,0 +1,371 @@
+@media (max-width: 768px) {
+    .header {
+        .wrapper {
+            .header__wrapper {
+                padding-top: 25px;
+
+                .header__logo {
+                    z-index: 10;
+
+                    // .header__logo-link {
+
+                    //     .header__logo-img {}
+                    // }
+                }
+
+                .header__nav {
+                    position: fixed;
+                    top: 0;
+                    left: -100%;
+                    width: 30%;
+                    height: 100%;
+                    background: $bg__header-active;
+
+                    &.active {
+                        left: 0;
+                    }
+
+                    .header__list {
+                        position: fixed;
+                        top: 20%;
+                        padding: 15px;
+
+                        flex-direction: column;
+
+                        .header__item {
+                            margin-bottom: 30px;
+                            margin-right: 0;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .menu__burger {
+                    display: block;
+                    margin: 5px;
+
+                    &.active {
+
+                        span {
+                            background: $secondary-color;
+                        }
+
+                        span:nth-child(1) {
+                            top: 13px;
+                            transform: rotate(45deg);
+                        }
+
+                        span:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        span:nth-child(3) {
+                            transform: rotate(-45deg);
+                            bottom: 13px;
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    .intro {
+        padding-top: 120px;
+        padding-bottom: 100px;
+
+        .intro__title {
+            font-size: 30px;
+        }
+
+        .intro__subtitle {
+            font-size: 14px;
+        }
+
+        .intro__form {
+
+            .form__wrapper {
+
+                .form__input {
+                    margin-right: 0;
+                    width: 100%;
+                    padding-bottom: 13px;
+                    background: url(/src/assets/img/svg/circle.svg) no-repeat left top;
+
+                    &::placeholder {
+                        font-size: 16px;
+                    }
+                }
+
+                .form__btn {}
+            }
+        }
+    }
+
+    .benefits {
+        margin-bottom: 35px;
+
+        .wrapper-content {
+
+            .benefits__title {
+                padding-bottom: 30px;
+                margin-right: 0;
+            }
+
+            .benefits__cards {
+                margin-bottom: 0px;
+
+                .benefits__card {
+                    grid-column: span 3;
+                    margin-bottom: 30px;
+
+                    .benefits__card-img {
+                        margin-bottom: 15px;
+
+                        .benefits__img {}
+                    }
+
+                    .benefits__card-title {
+                        margin-bottom: 15px;
+                    }
+
+                    .benefits__card-description {
+                        margin-bottom: 15px;
+                    }
+
+                    .benefits__card-link {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .places {
+
+        .wrapper-content {
+
+            .places__caption {
+
+                .places__title {
+                    font-size: 28px;
+                }
+
+                .places__link {}
+            }
+
+            .places__cards {
+
+                .places__card {
+
+                    .places__card-img {
+
+                        .places__card-title {}
+
+                        .places__card-link {}
+                    }
+
+                    &._size-lg {
+                        height: 230px;
+                    }
+
+                    &._size-sm {
+                        height: 230px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tours {
+        margin-bottom: 75px;
+
+        .tour___content {
+            column-gap: 30px;
+            margin-bottom: 50px;
+
+            &:last-child {}
+
+            .tour__content-img {
+                max-width: 100%;
+                grid-column: span 2;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    grid-row-start: -1;
+                }
+
+                .content-img {}
+            }
+
+            .tour__content-info {
+                grid-column: span 2;
+                padding-left: 0;
+
+                .tour__content-title {
+                    margin-bottom: 15px;
+                }
+
+                .tour__content-item {
+                    margin-bottom: 15px;
+                }
+
+                .tour__content-link {}
+            }
+        }
+    }
+
+    .top-places {
+        margin-bottom: 50px;
+
+        .top-places__title {}
+
+        .top-places__cards {
+            column-gap: 25px;
+            row-gap: 50px;
+
+            .top-places__card {
+                grid-column: span 6;
+
+                .top-places__card-img {
+                    margin-bottom: 25px;
+
+                    .card-img {}
+
+                    .top-places__card-state {
+
+
+                        .card-state__title {}
+
+                        .card-state__likes {
+
+                            .likes__value {}
+                        }
+
+                        .card-state__comments {
+
+                            .comments__value {}
+                        }
+                    }
+                }
+
+                .top-places__card-item {
+                    margin-bottom: 13px;
+                }
+
+                .top-places__card-btn {}
+            }
+        }
+    }
+
+    .footer {
+        padding: 60px 0;
+
+        .wrapper {
+
+            .footer__item {
+
+                .footer__logo {
+                    width: 100%;
+                    margin-bottom: 20px;
+
+                    .footer__img {}
+                }
+
+                .footer__nav {
+                    width: 100%;
+
+                    .footer__menu {
+                        width: 50%;
+                        margin-bottom: 20px;
+
+                        .footer__menu-item {
+
+                            .footer__menu-title {}
+                        }
+
+                        .footer__menu-link {}
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 558px) {
+    .intro {
+        .wrapper {
+            .intro__img {}
+
+            .intro__content {
+                .intro__title {}
+
+                .intro__subtitle {}
+
+                .intro__form {
+                    .form__wrapper {
+                        .form__input-container {
+                            .form__input {
+                                &::placeholder {}
+                            }
+
+                            .form__input-img {}
+                        }
+
+                        .form__btn {
+                            font-size: 20px;
+                            padding: 10px 25px;
+                            max-width: 100%;
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .places {
+        margin-bottom: 75px;
+
+        .wrapper-content {
+
+            .places__caption {
+
+                .places__title {
+                    font-size: 28px;
+                }
+
+                .places__link {}
+            }
+
+            .places__cards {
+
+                .places__card {
+
+                    .places__card-img {
+
+                        .places__card-title {}
+
+                        .places__card-link {}
+                    }
+
+                    &._size-lg {
+                        height: 170px;
+                    }
+
+                    &._size-sm {
+                        height: 170px;
+                    }
+                }
+            }
+        }
+    }
+}

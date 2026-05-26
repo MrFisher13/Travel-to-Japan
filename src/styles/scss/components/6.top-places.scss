@@ -1,0 +1,97 @@
+.top-places {
+    margin-bottom: 87px;
+
+    .top-places__title {
+        @extend %section-title;
+        margin-bottom: 54px;
+    }
+
+    .top-places__cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 57px;
+
+
+        .top-places__card {
+            display: flex;
+            flex-direction: column;
+            grid-column: span 2;
+
+            .top-places__card-img {
+                position: relative;
+                margin-bottom: 45px;
+
+                .card-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .top-places__card-state {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: end;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background: $bg-places-card;
+                    padding: 16px 25px;
+
+                    .card-state__title {
+                        @extend %style-item;
+                        color: $primery-color;
+                        margin: 0 auto 0 0;
+                    }
+
+                    .card-state__likes {
+                        @extend %style-item;
+                        color: $primery-color;
+                        margin-right: 28px;
+                        cursor: pointer;
+
+                        .img__likes {
+                            position: relative;
+                            top: 3px;
+                            left: 4px;
+                        }
+                    }
+
+                    .card-state__comments {
+                        position: relative;
+                        @extend %style-item;
+                        color: $primery-color;
+                        cursor: pointer;
+
+                        .img__comments {
+                            position: relative;
+                            top: 4px;
+                            left: 4px;
+                        }
+                    }
+                }
+            }
+
+            .top-places__card-item {
+                @extend %style-description;
+                margin-bottom: 31px;
+            }
+
+            .top-places__card-btn {
+                @extend %style-description;
+                display: inline-block;
+                max-width: 118px;
+                padding: 12px 19px;
+                background: $bg-btn;
+                color: $primery-color;
+                margin: auto 0 0 0;
+                transition: .3s;
+
+                &:hover, &:focus, &:active {
+                    background: $bg-btn-hover;
+                }
+            }
+        }
+    }
+}

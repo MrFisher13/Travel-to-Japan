@@ -1,0 +1,88 @@
+.places {
+    margin-bottom: 131px;
+
+    .wrapper-content {
+
+        .places__caption {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 36px;
+
+            .places__title {
+                @extend %section-title;
+            }
+
+            .places__link {
+                @extend %style-link;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .places__cards {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+
+            .places__card {
+                position: relative;
+                overflow: hidden;
+
+                &:hover .places__card-img {
+                    transform: scale(1.1);
+                }
+
+                &::after {
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    background: $bg-places-card;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+
+                &._size-lg {
+                    grid-column: span 3;
+                    height: 354px;
+                }
+
+                &._size-sm {
+                    grid-column: span 2;
+                    height: 283px;
+                }
+
+
+                .places__card-img {
+                    width: 100%;
+                    object-fit: cover;
+                    transition: .3s;
+                }
+
+                .places__card-title {
+                    position: absolute;
+                    bottom: 27px;
+                    left: 29px;
+                    font-family: 'Lato';
+                    font-weight: 700;
+                    font-size: 50px;
+                    line-height: 100%;
+                    color: $primery-color;
+                    z-index: 3;
+                }
+
+                .places__card-link {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 4;
+                }
+            }
+        }
+    }
+}

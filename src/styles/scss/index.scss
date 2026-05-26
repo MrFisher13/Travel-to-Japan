@@ -1,0 +1,20 @@
+// common
+@import "common/reset.scss";
+@import "common/fonts.scss";
+@import "common/variables.scss";
+@import "common/extends.scss";
+@import "common/wrappers.scss";
+
+// components
+@import "components/1.header.scss";
+@import "components/2.intro.scss";
+@import "components/3.benefits.scss";
+@import "components/4.places.scss";
+@import "components/5.tours.scss";
+@import "components/6.top-places.scss";
+@import "components/7.video.scss";
+@import "components/8.footer.scss";
+
+// media
+@import "media/media-tablet.scss";
+@import "media/media-phone.scss";
